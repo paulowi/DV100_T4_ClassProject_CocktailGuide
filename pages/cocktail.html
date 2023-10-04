@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cocktail Guide - Cocktail Details</title>
@@ -8,67 +8,125 @@
     <!-- Style Sheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/main.css">
-  </head>
-  <body class="bg-dark-subtle">
 
-    <!-- ------------------------------------------------------------------------------------------------ -->
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+    <style>
+        /* CSS for responsiveness */
+        .drinks-section {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 767px) {
+            .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark-subtle">
+
+<!-- ------------------------------------------------------------------------------------------------ -->
+<!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
             <img src="../assets/logo.png" alt="Logo" height="32">
             <span style="margin-left: 8px;">Five O'Clock Somewhere</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Browse</a>
-              </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Browse</a>
+                </li>
             </ul>
-          </div>
         </div>
-      </nav>
+    </div>
+</nav>
 
-    <!-- ------------------------------------------------------------------------------------------------ -->
-    <!-- Page Content -->
+<!-- ------------------------------------------------------------------------------------------------ -->
+<!-- Page Content -->
 
-    <div class="container">
-        <div class="row py-3">
-            <button type="button" class="btn btn-dark w-auto">Back</button>
+<div class="container">
+    <div class="row py-3">
+        <button type="button" class="btn btn-dark w-auto">Back</button>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <img src="https:\/\/www.thecocktaildb.com\/images\/media\/drink\/5noda61589575158.jpg"
+                 class="img-fluid rounded-4">
         </div>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <img src="https:\/\/www.thecocktaildb.com\/images\/media\/drink\/5noda61589575158.jpg" class="img-fluid rounded-4">
-            </div>
-            <div class="col-md-6">
-                <div class="card rounded-4">
-                    <div class="card-body">
-                        <h1 class="text-light-emphasis">Margarita</h1>
-                        <span class="badge rounded-pill text-bg-secondary">Alcoholic</span>
-                        <span class="badge rounded-pill text-bg-secondary">Cocktail glass</span>
-                        <p class="pt-3">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p>
-                        <h6>Ingredients</h6>
-                        <ul class="list-group">
-                            <li class="list-group-item">Tequila</li>
-                            <li class="list-group-item">Triple sec</li>
-                            <li class="list-group-item">Lime juice</li>
-                            <li class="list-group-item">Salt</li>
-                        </ul>
-                    </div>
-                  </div>
+        <div class="col-md-6">
+            <div class="card rounded-4">
+                <div class="card-body">
+                    <h1 class="text-light-emphasis">Margarita</h1>
+                    <span class="badge rounded-pill text-bg-secondary">Alcoholic</span>
+                    <span class="badge rounded-pill text-bg-secondary">Cocktail glass</span>
+                    <p class="pt-3">Rub the rim of the glass with the lime slice to make the salt stick to it. Take
+                        care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the
+                        lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then
+                        carefully pour into the glass.</p>
+                    <h6>Ingredients</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item">Tequila</li>
+                        <li class="list-group-item">Triple sec</li>
+                        <li class="list-group-item">Lime juice</li>
+                        <li class="list-group-item">Salt</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Javascript -->
-    <!-- ------------------ -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="../scripts/main.js"></script>
+<!-- New Section: Drinks you may like -->
+<div class="container">
+    <section class="drinks-section">
+        <h2 class="text-light-emphasis">Drinks you may like</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="https://static.wikia.nocookie.net/cyberpunk/images/6/6c/TopQualityAlcohol08.png" class="card-img-top" alt="Drink 1">
+                    <div class="card-body">
+                        <h5 class="card-title">The Johnny Silverhand</h5>
+                        <a href="#" class="btn btn-primary">View Drink</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="https://static.wikia.nocookie.net/cyberpunk/images/a/a9/TopQualityAlcohol09.png" class="card-img-top" alt="Drink 2">
+                    <div class="card-body">
+                        <h5 class="card-title">The Jackie Welles</h5>
+                        <a href="#" class="btn btn-primary">View Drink</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="https://static.wikia.nocookie.net/cyberpunk/images/a/a3/TopQualityAlcohol10.png" class="card-img-top" alt="Drink 3">
+                    <div class="card-body">
+                        <h5 class="card-title">The David Martinez</h5>
+                        <a href="#" class="btn btn-primary">View Drink</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
-  </body>
+<!-- Javascript -->
+<!-- ------------------ -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="../scripts/main.js"></script>
+</body>
 </html>
