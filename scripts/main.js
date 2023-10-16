@@ -1,24 +1,35 @@
-
-// Run code when the document loads
 $(document).ready(function() {
-
-    // ---------------------------------------------------------------------------------------------------
-    // Sign up form
-    // ---------------------------------------------------------------------------------------------------
-
-    // ---------------------------------------------------------------------------------------------------
-    // On Submit, prevent the default form submission
-
     $('#signupForm').submit(function(event) {
+      event.preventDefault();
 
-        event.preventDefault();
-        
-        if (this.checkValidity() === false) {
-            event.stopPropagation();
-        } else {
-            // Add any submission code here, like saving the data to localStorage
-            window.location.href = 'pages/browse.html';
+      if (this.checkValidity() === false) {
+        event.stopPropagation();
+      } else {
+        const password = $('#password').val();
+        const confirmPassword = $('#confirmPassword').val();
+        const isValidPassword = isPasswordValid(password);
+
+        if (!isValidPassword) {
+          $('#password').get(0).setCustomValidity('Password must contain at least 6 characters, 1 number, 1 uppercase letter, and 1 lowercase letter.');
+          this.reportValidity();
+          return;
         }
-        $(this).addClass('was-validated');
+
+        if (password !== confirmPassword) {
+          $('#confirmPassword').get(0).setCustomValidity('Passwords do not match');
+          this.reportValidity();
+          return;
+        }
+
+      
+        window.location.href = 'pages/browse.html';
+      }
+
+      $(this).addClass('was-validated');
     });
-});
+
+    function isPasswordValid(password) {
+      const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+      return passwordRegex.test(password);
+    }
+  });
