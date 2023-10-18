@@ -23,8 +23,6 @@
         }
     </style>
 </head>
-<body class="bg-dark-subtle">
-
 <!-- ------------------------------------------------------------------------------------------------ -->
 <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -46,6 +44,31 @@
         </div>
     </div>
 </nav>
+
+<div class="container">
+    <h1>Registration Form</h1>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <p id="passwordError" class="error"></p>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <br>
+        <p id="confirmPasswordError" class="error"></p>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<body class="bg-dark-subtle">
+
+
 
 <!-- ------------------------------------------------------------------------------------------------ -->
 <!-- Page Content -->
